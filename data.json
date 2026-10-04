@@ -161,12 +161,12 @@
     "strap": "Mauritius remains heavily dependent on imported energy and food while coastal erosion and declining rainfall increase long-term resilience pressures.",
     "cards": [
       {
-        "icon": "🍚",
-        "label": "Food requirements met by imports",
-        "value": "~70%",
-        "period": "Current national food requirement",
-        "source": "Ministry of Agro-Industry, Food Security, Blue Economy and Fisheries — 2026",
-        "sourceUrl": "https://agriculture.govmu.org/Documents/Newsletter/2026/newsletter%20final.pdf"
+        "icon": "🪸",
+        "label": "Coral species recorded",
+        "value": "159",
+        "period": "Reported from Mauritius",
+        "source": "Ministry of Environment — National Oil Spill Contingency Plan 2025",
+        "sourceUrl": "https://environment.govmu.org/DocumentsList/Final%20%20NOSCP%20%282025%29.pdf"
       },
       {
         "icon": "≈",

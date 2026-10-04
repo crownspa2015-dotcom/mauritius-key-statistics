@@ -1,0 +1,238 @@
+{
+  "meta": {
+    "title": "Mauritius — Key Statistics",
+    "subtitle": "Official statistics at a glance — showing strong living standards alongside unequal outcomes, a diversified economy facing its next transition, and an island state exposed to resource dependence and climate pressure.",
+    "governmentLabel": "Government of Mauritius",
+    "lastUpdated": "4 October 2026"
+  },
+  "sources": [
+    "Statistics Mauritius",
+    "Prime Minister's Office / Government Information Service",
+    "Ministry of Agro-Industry, Food Security, Blue Economy and Fisheries",
+    "Ministry of Environment, Solid Waste Management and Climate Change"
+  ],
+  "social": {
+    "tag": "Strong living standards, but unequal outcomes remain",
+    "strap": "Mauritius has high household security and digital access, while child poverty, education outcomes and gender gaps show that opportunity is not evenly shared.",
+    "cards": [
+      {
+        "icon": "🏠",
+        "label": "Home ownership",
+        "value": "90.4%",
+        "period": "Households owning their house · 2022",
+        "source": "Statistics Mauritius — 2022 Housing Census",
+        "sourceUrl": "https://statsmauritius.govmu.org/Documents/Statistics/ESI/2022/EI1686/2022%20Housing%20Census_Main%20Results_18112022.pdf"
+      },
+      {
+        "icon": "🌐",
+        "label": "Household internet access",
+        "value": "85.8%",
+        "period": "2024 · up from 72.6% in 2020",
+        "source": "Statistics Mauritius — ICT Statistics 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Documents/Statistics/ESI/2026/EI1939/ICT_Yr25_100726.pdf"
+      },
+      {
+        "icon": "🎓",
+        "label": "School Certificate pass rate",
+        "value": "69.3%",
+        "period": "2025 · down from 72.7% in 2024",
+        "source": "Statistics Mauritius — Education Statistics 2026",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Education/Edu_Yr26.aspx"
+      }
+    ],
+    "visuals": [
+      {
+        "type": "bars",
+        "title": "Child poverty and the role of social protection",
+        "subtitle": "Children below 16 years · 2023",
+        "series": [
+          {
+            "label": "With transfers & free services",
+            "value": 15.7,
+            "display": "15.7%"
+          },
+          {
+            "label": "Without transfers & free services",
+            "value": 45.0,
+            "display": "45.0%"
+          }
+        ],
+        "source": "Statistics Mauritius — Poverty Analysis 2023",
+        "sourceUrl": "https://statsmauritius.govmu.org/Documents/Statistics/By_Subject/Poverty/Poverty_Analysis_Report%20_Yr23_100225.pdf"
+      },
+      {
+        "type": "bars",
+        "title": "Women who are heads of business",
+        "subtitle": "Share of employed people · 2024",
+        "series": [
+          {
+            "label": "Women",
+            "value": 10.9,
+            "display": "10.9%"
+          },
+          {
+            "label": "Men",
+            "value": 25.1,
+            "display": "25.1%"
+          }
+        ],
+        "source": "Statistics Mauritius — Gender Statistics 2024",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Gender/Gender_Yr24.aspx"
+      }
+    ]
+  },
+  "economic": {
+    "tag": "A diversified service economy facing its next transformation",
+    "strap": "Tourism, ICT and services underpin the economy, while youth unemployment and a large merchandise trade gap reveal persistent structural challenges.",
+    "cards": [
+      {
+        "icon": "📈",
+        "label": "GDP growth",
+        "value": "3.5%",
+        "period": "2025 · revised September 2026 series",
+        "source": "Statistics Mauritius — National Accounts Estimates, September 2026",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/National_Accounts/NA/NAE_Sep26.aspx"
+      },
+      {
+        "icon": "✈",
+        "label": "Tourism earnings",
+        "value": "Rs 103bn",
+        "period": "2025 · tourist arrivals exceeded 1.4 million",
+        "source": "Government of Mauritius — Budget 2026–2027 overview",
+        "sourceUrl": "https://pmo.govmu.org/News/SitePages/Budget-2026-2027--A-Roadmap-for-an-Inclusive-and-Future-Ready-Mauritius.aspx"
+      },
+      {
+        "icon": "💻",
+        "label": "ICT contribution to GVA",
+        "value": "5.7%",
+        "period": "2025",
+        "source": "Statistics Mauritius — ICT Statistics 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/ICT/ICT_Yr25.aspx"
+      }
+    ],
+    "visuals": [
+      {
+        "type": "bars",
+        "title": "The youth employment challenge",
+        "subtitle": "Unemployment rate · 2025",
+        "series": [
+          {
+            "label": "Overall",
+            "value": 5.7,
+            "display": "5.7%"
+          },
+          {
+            "label": "Youth 16–24",
+            "value": 18.4,
+            "display": "18.4%"
+          },
+          {
+            "label": "Young women 16–24",
+            "value": 21.2,
+            "display": "21.2%"
+          }
+        ],
+        "source": "Statistics Mauritius — Labour Force, Employment and Unemployment 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Labour/Labour/LF_Emp_Unemp_Yr25.aspx"
+      },
+      {
+        "type": "bars",
+        "title": "Merchandise imports vs exports",
+        "subtitle": "Rs billion · 2025",
+        "series": [
+          {
+            "label": "Imports",
+            "value": 318.962,
+            "display": "Rs 319.0bn"
+          },
+          {
+            "label": "Exports",
+            "value": 107.703,
+            "display": "Rs 107.7bn"
+          }
+        ],
+        "source": "Statistics Mauritius — External Merchandise Trade 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/External_Trade/Ext_Trade/Ext_Trade_4Qtr25.aspx"
+      }
+    ]
+  },
+  "environment": {
+    "tag": "Resource dependence meets climate exposure",
+    "strap": "Mauritius remains heavily dependent on imported energy and food while coastal erosion and declining rainfall increase long-term resilience pressures.",
+    "oceanContext": {
+      "value": "2.3 million km²",
+      "label": "Exclusive Economic Zone",
+      "text": "Mauritius is a large ocean state. Its maritime territory is a major national asset for the blue economy, fisheries, biodiversity and climate resilience.",
+      "source": "Government of Mauritius — NDC 3.0",
+      "sourceUrl": "https://environment.govmu.org/DocumentsList/NDC%203.0%20%20Mauritius.pdf"
+    },
+    "cards": [
+      {
+        "icon": "🍚",
+        "label": "Food requirements met by imports",
+        "value": "~70%",
+        "period": "Current national food requirement",
+        "source": "Ministry of Agro-Industry, Food Security, Blue Economy and Fisheries — 2026",
+        "sourceUrl": "https://agriculture.govmu.org/Documents/Newsletter/2026/newsletter%20final.pdf"
+      },
+      {
+        "icon": "≈",
+        "label": "Shoreline already eroded",
+        "value": ">37 km",
+        "period": "Observed coastal erosion reported in NDC 3.0",
+        "source": "Government of Mauritius — Third Nationally Determined Contribution",
+        "sourceUrl": "https://environment.govmu.org/DocumentsList/NDC%203.0%20%20Mauritius.pdf"
+      },
+      {
+        "icon": "☂",
+        "label": "Projected rainfall decline",
+        "value": "13%",
+        "period": "By 2050",
+        "source": "Government of Mauritius — Third Nationally Determined Contribution",
+        "sourceUrl": "https://environment.govmu.org/DocumentsList/NDC%203.0%20%20Mauritius.pdf"
+      }
+    ],
+    "visuals": [
+      {
+        "type": "donut",
+        "title": "Primary energy dependence",
+        "subtitle": "Share of total primary energy requirement · 2025",
+        "series": [
+          {
+            "label": "Imported fuels",
+            "value": 90.8,
+            "display": "90.8%"
+          },
+          {
+            "label": "Local sources",
+            "value": 9.2,
+            "display": "9.2%"
+          }
+        ],
+        "source": "Statistics Mauritius — Energy and Water Statistics 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Energy_Water/Energy_Water_Yr25.aspx"
+      },
+      {
+        "type": "donut",
+        "title": "Electricity generation",
+        "subtitle": "Renewable vs non-renewable · 2025",
+        "series": [
+          {
+            "label": "Renewable",
+            "value": 17.8,
+            "display": "17.8%"
+          },
+          {
+            "label": "Non-renewable",
+            "value": 82.2,
+            "display": "82.2%"
+          }
+        ],
+        "source": "Statistics Mauritius — Energy and Water Statistics 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Energy_Water/Energy_Water_Yr25.aspx"
+      }
+    ],
+    "climate": [],
+    "note": "Mauritius’ resilience story combines major external resource dependence with direct climate pressure. Around 90.8% of primary energy is imported, around 70% of food requirements are met through imports, and only 17.8% of electricity was renewable in 2025. Government climate reporting identifies more than 37 km of shoreline already eroded and projects a 13% decline in rainfall by 2050."
+  }
+}

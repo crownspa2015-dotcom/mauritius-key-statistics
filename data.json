@@ -183,28 +183,17 @@
         "period": "By 2050",
         "source": "Government of Mauritius — Third Nationally Determined Contribution",
         "sourceUrl": "https://environment.govmu.org/DocumentsList/NDC%203.0%20%20Mauritius.pdf"
+      },
+      {
+        "icon": "🪸",
+        "label": "Corals subjected to bleaching",
+        "value": "60%",
+        "period": "2018/19 bleaching event",
+        "source": "Government of Mauritius — Impacts and Consequences of Climate Change",
+        "sourceUrl": "https://environment.govmu.org/Documents/Impacts%20and%20Consequences%20of%20CC%20-%20June%202023.pdf"
       }
     ],
     "visuals": [
-      {
-        "type": "donut",
-        "title": "Primary energy dependence",
-        "subtitle": "Share of total primary energy requirement · 2025",
-        "series": [
-          {
-            "label": "Imported fuels",
-            "value": 90.8,
-            "display": "90.8%"
-          },
-          {
-            "label": "Local sources",
-            "value": 9.2,
-            "display": "9.2%"
-          }
-        ],
-        "source": "Statistics Mauritius — Energy and Water Statistics 2025",
-        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Energy_Water/Energy_Water_Yr25.aspx"
-      },
       {
         "type": "donut",
         "title": "Electricity generation",

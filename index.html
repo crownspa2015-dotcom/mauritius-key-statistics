@@ -14,11 +14,8 @@
 html,body{margin:0;max-width:100%;overflow-x:hidden}
 body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
 .wrap{width:100%;margin:0;padding:16px 14px 28px}
-.hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.7fr);gap:12px;margin-bottom:16px}
+.hero{margin-bottom:16px}
 .hero h1{font-size:42px;line-height:1.05;margin:6px 0 10px;color:#111f5a}
-.hero p{font-size:16px;line-height:1.4;margin:0;color:#334a77}
-.source-box{border:1px solid var(--line);border-radius:14px;padding:14px 16px;background:#fbfdff}
-.source-box strong{display:block;margin:3px 0 6px}
 .pillar{border-radius:16px;padding:12px;margin:16px 0}
 .social{background:var(--social)} .economic{background:var(--economic)} .environment{background:var(--env)}
 .pillar-head{display:flex;align-items:center;gap:10px;padding:2px 4px 10px}
@@ -67,11 +64,9 @@ body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
 .climate-stat{background:rgba(255,255,255,.8);border-radius:11px;padding:18px;text-align:center}
 .climate-stat strong{display:block;font-size:32px;color:#087565;margin-bottom:5px}
 .climate-stat span{font-size:13px;color:#46647a}
-.note{background:rgba(255,255,255,.74);border-radius:11px;padding:16px;font-size:14px;line-height:1.45;color:#365270;margin-top:10px}
-.sources{display:flex;justify-content:space-between;gap:20px;padding:16px 4px 0;font-size:13px;color:#4e6380;line-height:1.45}
 .error{padding:20px;border:1px solid #e0a5a5;background:#fff6f6;border-radius:10px;color:#7b1e1e}
 @media(max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-grid{grid-template-columns:1fr}}
-@media(max-width:760px){.hero{grid-template-columns:1fr}.pillar-head{align-items:flex-start;flex-wrap:wrap}.strap{margin-left:64px;text-align:left;width:100%;max-width:none}.donut-wrap,.ocean-card{grid-template-columns:1fr}}
+@media(max-width:760px){.pillar-head{align-items:flex-start;flex-wrap:wrap}.strap{margin-left:64px;text-align:left;width:100%;max-width:none}.donut-wrap,.ocean-card{grid-template-columns:1fr}}
 @media(max-width:560px){.wrap{padding:14px 10px}.hero h1{font-size:34px}.cards{grid-template-columns:1fr}.value{font-size:27px}.pillar-head h2{font-size:23px}.bar-row{grid-template-columns:1fr}.bar-value{text-align:left}.climate-panel{grid-template-columns:1fr}}
 </style>
 </head>
@@ -126,20 +121,18 @@ function line(v){
 }
 function visual(v){return v.type==="bars"?bars(v):v.type==="donut"?donut(v):line(v)}
 function pillar(cls,title,obj,extra=""){
-  return `<section class="pillar ${cls}"><div class="pillar-head"><div class="badge">${cls==="environment"?"❧":"▥"}</div><h2>${title}</h2><div class="tag">${esc(obj.tag)}</div><div class="strap">${esc(obj.strap)}</div></div>${extra}${cards(obj.cards)}<div class="visual-grid">${(obj.visuals||[]).map(visual).join("")}</div>${cls==="environment"?`${(obj.climate&&obj.climate.length)?`<div class="climate-panel">${obj.climate.map(c=>`<div class="climate-stat"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>`).join("")}</div>`:""}<div class="note">${esc(obj.note)}</div>`:""}</section>`
+  return `<section class="pillar ${cls}"><div class="pillar-head"><div class="badge">${cls==="environment"?"❧":"▥"}</div><h2>${title}</h2><div class="tag">${esc(obj.tag)}</div><div class="strap">${esc(obj.strap)}</div></div>${extra}${cards(obj.cards)}<div class="visual-grid">${(obj.visuals||[]).map(visual).join("")}</div>${cls==="environment"&&obj.climate&&obj.climate.length?`<div class="climate-panel">${obj.climate.map(c=>`<div class="climate-stat"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>`).join("")}</div>`:""}</section>`
 }
 async function load(){
  try{
   const r=await fetch(DATA_URL,{cache:"no-store"}); if(!r.ok)throw new Error(`HTTP ${r.status}`);
   const d=await r.json();
-  const ocean=`<div class="ocean-card"><div><div class="ocean-big">${esc(d.environment.oceanContext.value)}</div><div class="ocean-label">${esc(d.environment.oceanContext.label)}</div></div><div class="ocean-text">${esc(d.environment.oceanContext.text)}<div class="chart-source">Source: <a href="${esc(d.environment.oceanContext.sourceUrl)}" target="_blank" rel="noopener">${esc(d.environment.oceanContext.source)}</a></div></div></div>`;
+  const envContext=`<div class="ocean-card"><div><div class="ocean-big">${esc(d.environment.environmentContext.value)}</div><div class="ocean-label">${esc(d.environment.environmentContext.label)}</div></div><div class="ocean-text">${esc(d.environment.environmentContext.text)}<div class="chart-source">Source: <a href="${esc(d.environment.environmentContext.sourceUrl)}" target="_blank" rel="noopener">${esc(d.environment.environmentContext.source)}</a></div></div></div>`;
   document.getElementById("app").innerHTML=`
-   <div class="hero"><div><h1>${esc(d.meta.title)}</h1><p>${esc(d.meta.subtitle)}</p></div>
-    <div class="source-box"><span>Official source network</span><strong>${esc(d.meta.governmentLabel)}</strong><div>${d.sources.map(esc).join(" · ")}</div></div></div>
+   <div class="hero"><h1>${esc(d.meta.title)}</h1></div>
    ${pillar("social","SOCIAL",d.social)}
    ${pillar("economic","ECONOMIC",d.economic)}
-   ${pillar("environment","ENVIRONMENTAL",d.environment,ocean)}
-   <div class="sources"><div><strong>Official sources:</strong> ${d.sources.map(esc).join("; ")}</div><div><strong>Data file updated:</strong> ${esc(d.meta.lastUpdated)}</div></div>`;
+   ${pillar("environment","ENVIRONMENTAL",d.environment,envContext)}`;
  }catch(e){document.getElementById("app").innerHTML=`<div class="error"><strong>Could not load data.</strong><br>${esc(e.message)}</div>`}
 }
 load();

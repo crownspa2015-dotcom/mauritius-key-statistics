@@ -122,7 +122,7 @@ function line(v){
 }
 function visual(v){return v.type==="bars"?bars(v):v.type==="donut"?donut(v):line(v)}
 function pillar(cls,title,obj,extra=""){
-  return `<section class="pillar ${cls}"><div class="pillar-head"><div class="badge">${cls==="environment"?"❧":"▥"}</div><h2>${title}</h2><div class="tag">${esc(obj.tag)}</div><div class="strap">${esc(obj.strap)}</div></div>${extra}${cards(obj.cards)}<div class="visual-grid">${(obj.visuals||[]).map(visual).join("")}</div>${cls==="environment"&&obj.climate&&obj.climate.length?`<div class="climate-panel">${obj.climate.map(c=>`<div class="climate-stat"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>`).join("")}</div>`:""}</section>`
+  return `<section class="pillar ${cls}"><div class="pillar-head"><div class="badge">${cls==="environment"?"❧":cls==="social"?"👥":"📊"}</div><h2>${title}</h2><div class="tag">${esc(obj.tag)}</div><div class="strap">${esc(obj.strap)}</div></div>${extra}${cards(obj.cards)}<div class="visual-grid">${(obj.visuals||[]).map(visual).join("")}</div>${cls==="environment"&&obj.climate&&obj.climate.length?`<div class="climate-panel">${obj.climate.map(c=>`<div class="climate-stat"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>`).join("")}</div>`:""}</section>`
 }
 async function load(){
  try{

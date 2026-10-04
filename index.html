@@ -127,12 +127,11 @@ async function load(){
  try{
   const r=await fetch(DATA_URL,{cache:"no-store"}); if(!r.ok)throw new Error(`HTTP ${r.status}`);
   const d=await r.json();
-  const envContext=`<div class="ocean-card"><div><div class="ocean-big">${esc(d.environment.environmentContext.value)}</div><div class="ocean-label">${esc(d.environment.environmentContext.label)}</div></div><div class="ocean-text">${esc(d.environment.environmentContext.text)}<div class="chart-source">Source: <a href="${esc(d.environment.environmentContext.sourceUrl)}" target="_blank" rel="noopener">${esc(d.environment.environmentContext.source)}</a></div></div></div>`;
   document.getElementById("app").innerHTML=`
    <div class="hero"><h1>${esc(d.meta.title)}</h1></div>
    ${pillar("social","SOCIAL",d.social)}
    ${pillar("economic","ECONOMIC",d.economic)}
-   ${pillar("environment","ENVIRONMENTAL",d.environment,envContext)}`;
+   ${pillar("environment","ENVIRONMENTAL",d.environment)}`;
  }catch(e){document.getElementById("app").innerHTML=`<div class="error"><strong>Could not load data.</strong><br>${esc(e.message)}</div>`}
 }
 load();

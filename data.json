@@ -193,7 +193,9 @@
         "value": "60%",
         "label": "Corals subjected to bleaching",
         "source": "Government of Mauritius — Impacts and Consequences of Climate Change",
-        "sourceUrl": "https://environment.govmu.org/Documents/Impacts%20and%20Consequences%20of%20CC%20-%20June%202023.pdf"
+        "sourceUrl": "https://environment.govmu.org/Documents/Impacts%20and%20Consequences%20of%20CC%20-%20June%202023.pdf",
+        "icon": "🪸",
+        "note": "Repeated bleaching has been recorded since 2004, with severe events causing mass coral mortality."
       },
       {
         "type": "donut",

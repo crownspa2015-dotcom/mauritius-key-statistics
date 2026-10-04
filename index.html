@@ -120,7 +120,15 @@ function line(v){
     <div class="xlabels" style="grid-template-columns:repeat(${v.series.length},1fr)">${v.series.map(d=>`<span>${esc(d.label)}</span>`).join("")}</div>
     <div class="chart-source">Source: <a href="${esc(v.sourceUrl)}" target="_blank" rel="noopener">${esc(v.source)}</a></div></div>`;
 }
-function visual(v){return v.type==="bars"?bars(v):v.type==="donut"?donut(v):line(v)}
+function statVisual(v){
+  return `<div class="chart-card"><h3>${esc(v.title)}</h3><div class="chart-sub">${esc(v.subtitle)}</div>
+    <div style="display:flex;align-items:center;justify-content:center;min-height:210px;text-align:center">
+      <div><div style="font-size:72px;font-weight:800;line-height:1;color:#087565">${esc(v.value)}</div>
+      <div style="font-size:18px;font-weight:700;margin-top:12px;color:#0c1b57">${esc(v.label)}</div></div>
+    </div>
+    <div class="chart-source">Source: <a href="${esc(v.sourceUrl)}" target="_blank" rel="noopener">${esc(v.source)}</a></div></div>`;
+}
+function visual(v){return v.type==="bars"?bars(v):v.type==="donut"?donut(v):v.type==="stat"?statVisual(v):line(v)}
 function pillar(cls,title,obj,extra=""){
   return `<section class="pillar ${cls}"><div class="pillar-head"><div class="badge">${cls==="environment"?"❧":cls==="social"?"👥":"📊"}</div><h2>${title}</h2><div class="tag">${esc(obj.tag)}</div><div class="strap">${esc(obj.strap)}</div></div>${extra}${cards(obj.cards)}<div class="visual-grid">${(obj.visuals||[]).map(visual).join("")}</div>${cls==="environment"&&obj.climate&&obj.climate.length?`<div class="climate-panel">${obj.climate.map(c=>`<div class="climate-stat"><strong>${esc(c.value)}</strong><span>${esc(c.label)}</span></div>`).join("")}</div>`:""}</section>`
 }

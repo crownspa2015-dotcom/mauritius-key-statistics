@@ -161,12 +161,12 @@
     "strap": "Mauritius remains heavily dependent on imported energy and food while coastal erosion and declining rainfall increase long-term resilience pressures.",
     "cards": [
       {
-        "icon": "🪸",
-        "label": "Coral species recorded",
-        "value": "159",
-        "period": "Reported from Mauritius",
-        "source": "Ministry of Environment — National Oil Spill Contingency Plan 2025",
-        "sourceUrl": "https://environment.govmu.org/DocumentsList/Final%20%20NOSCP%20%282025%29.pdf"
+        "icon": "⚡",
+        "label": "Of GHG emissions from energy",
+        "value": "75%",
+        "period": "Energy sector share of greenhouse-gas emissions · 2025",
+        "source": "Statistics Mauritius — Environment Statistics 2025",
+        "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Environment/Env_Yr25.aspx"
       },
       {
         "icon": "≈",
@@ -225,13 +225,6 @@
         "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Energy_Water/Energy_Water_Yr25.aspx"
       }
     ],
-    "climate": [],
-    "environmentContext": {
-      "value": "75%",
-      "label": "OF GHG EMISSIONS FROM ENERGY",
-      "text": "The energy sector was Mauritius’ largest source of greenhouse-gas emissions in 2025, accounting for 5,078.2 Gg CO₂-eq.",
-      "source": "Statistics Mauritius — Environment Statistics 2025",
-      "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Environment/Env_Yr25.aspx"
-    }
+    "climate": []
   }
 }

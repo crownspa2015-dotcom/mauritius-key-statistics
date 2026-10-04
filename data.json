@@ -227,9 +227,9 @@
     ],
     "climate": [],
     "environmentContext": {
-      "value": "582,798 tonnes",
-      "label": "Solid waste landfilled",
-      "text": "Waste sent to Mare Chicose landfill increased by 17.0% in 2025, from 498,309 tonnes in 2024.",
+      "value": "75%",
+      "label": "OF GHG EMISSIONS FROM ENERGY",
+      "text": "The energy sector was Mauritius’ largest source of greenhouse-gas emissions in 2025, accounting for 5,078.2 Gg CO₂-eq.",
       "source": "Statistics Mauritius — Environment Statistics 2025",
       "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Environment/Env_Yr25.aspx"
     }

@@ -121,10 +121,18 @@ function line(v){
     <div class="chart-source">Source: <a href="${esc(v.sourceUrl)}" target="_blank" rel="noopener">${esc(v.source)}</a></div></div>`;
 }
 function statVisual(v){
-  return `<div class="chart-card"><h3>${esc(v.title)}</h3><div class="chart-sub">${esc(v.subtitle)}</div>
-    <div style="display:flex;align-items:center;justify-content:center;min-height:210px;text-align:center">
-      <div><div style="font-size:72px;font-weight:800;line-height:1;color:#087565">${esc(v.value)}</div>
-      <div style="font-size:18px;font-weight:700;margin-top:12px;color:#0c1b57">${esc(v.label)}</div></div>
+  return `<div class="chart-card">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px">
+      <div style="width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#dff3ee;font-size:22px;flex:0 0 auto">${esc(v.icon||"")}</div>
+      <h3 style="margin:0">${esc(v.title)}</h3>
+    </div>
+    <div class="chart-sub">${esc(v.subtitle)}</div>
+    <div style="display:flex;align-items:center;justify-content:center;min-height:180px;text-align:center">
+      <div>
+        <div style="font-size:72px;font-weight:800;line-height:1;color:#087565">${esc(v.value)}</div>
+        <div style="font-size:18px;font-weight:700;margin-top:12px;color:#0c1b57">${esc(v.label)}</div>
+        ${v.note?`<div style="font-size:13px;line-height:1.4;color:#4e6380;margin-top:12px;max-width:520px">${esc(v.note)}</div>`:""}
+      </div>
     </div>
     <div class="chart-source">Source: <a href="${esc(v.sourceUrl)}" target="_blank" rel="noopener">${esc(v.source)}</a></div></div>`;
 }

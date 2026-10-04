@@ -64,6 +64,7 @@ body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff}
 .climate-stat{background:rgba(255,255,255,.8);border-radius:11px;padding:18px;text-align:center}
 .climate-stat strong{display:block;font-size:32px;color:#087565;margin-bottom:5px}
 .climate-stat span{font-size:13px;color:#46647a}
+.updated-stamp{padding:14px 4px 0;text-align:right;font-size:13px;color:#4e6380;line-height:1.4}
 .error{padding:20px;border:1px solid #e0a5a5;background:#fff6f6;border-radius:10px;color:#7b1e1e}
 @media(max-width:1000px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.pillar-head{align-items:flex-start;flex-wrap:wrap}.strap{margin-left:64px;text-align:left;width:100%;max-width:none}.donut-wrap,.ocean-card{grid-template-columns:1fr}}
@@ -131,7 +132,8 @@ async function load(){
    <div class="hero"><h1>${esc(d.meta.title)}</h1></div>
    ${pillar("social","SOCIAL",d.social)}
    ${pillar("economic","ECONOMIC",d.economic)}
-   ${pillar("environment","ENVIRONMENTAL",d.environment)}`;
+   ${pillar("environment","ENVIRONMENTAL",d.environment)}
+   <div class="updated-stamp"><strong>Data file updated:</strong> ${esc(d.meta.lastUpdated)}</div>`;
  }catch(e){document.getElementById("app").innerHTML=`<div class="error"><strong>Could not load data.</strong><br>${esc(e.message)}</div>`}
 }
 load();

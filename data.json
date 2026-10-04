@@ -53,7 +53,7 @@
           },
           {
             "label": "Without transfers & free services",
-            "value": 45.0,
+            "value": 45,
             "display": "45.0%"
           }
         ],
@@ -159,13 +159,6 @@
   "environment": {
     "tag": "Resource dependence meets climate exposure",
     "strap": "Mauritius remains heavily dependent on imported energy and food while coastal erosion and declining rainfall increase long-term resilience pressures.",
-    "oceanContext": {
-      "value": "2.3 million km²",
-      "label": "Exclusive Economic Zone",
-      "text": "Mauritius is a large ocean state. Its maritime territory is a major national asset for the blue economy, fisheries, biodiversity and climate resilience.",
-      "source": "Government of Mauritius — NDC 3.0",
-      "sourceUrl": "https://environment.govmu.org/DocumentsList/NDC%203.0%20%20Mauritius.pdf"
-    },
     "cards": [
       {
         "icon": "🍚",
@@ -233,6 +226,12 @@
       }
     ],
     "climate": [],
-    "note": "Mauritius’ resilience story combines major external resource dependence with direct climate pressure. Around 90.8% of primary energy is imported, around 70% of food requirements are met through imports, and only 17.8% of electricity was renewable in 2025. Government climate reporting identifies more than 37 km of shoreline already eroded and projects a 13% decline in rainfall by 2050."
+    "environmentContext": {
+      "value": "582,798 tonnes",
+      "label": "Solid waste landfilled",
+      "text": "Waste sent to Mare Chicose landfill increased by 17.0% in 2025, from 498,309 tonnes in 2024.",
+      "source": "Statistics Mauritius — Environment Statistics 2025",
+      "sourceUrl": "https://statsmauritius.govmu.org/Pages/Statistics/ESI/Environment/Env_Yr25.aspx"
+    }
   }
 }
